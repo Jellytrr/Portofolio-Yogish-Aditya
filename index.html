@@ -122,18 +122,137 @@
     .single-list-topics-icon {
         margin-bottom: 10px;
     }
-
+    
     h2 {
         font-size: 24px;
         margin-bottom: 5px;
     }
-
+    
     p {
         color: #888;
     }
 	h5{
-		color: blue;
+        color: blue;
 	}
+    .mt-52 {
+    margin-top: 200px;
+  }
+        .card {
+            background-color: #2a2a3c;
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            width: 600px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .profile-info {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .profile-info h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .profile-info h2 {
+            font-size: 20px;
+            margin: 10px 0;
+            color: #00bcd4;
+        }
+        .profile-info p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #bbbbbb;
+        }
+        .button {
+            background-color: #00bcd4;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #0097a7;
+        }
+        .hexagon {
+            position: relative;
+            width: 150px;
+            height: 130px;
+            margin: 0 20px;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            background-color: #00bcd4;
+        }
+
+
+/* Styling Card dengan Transparansi (Glassmorphism) */
+#explore {
+    background-color: #DCD7C9   ;
+}
+#profile {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.1); /* Efek transparan */
+    border-radius: 15px;
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    background-color: #FF9D23;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Foto Profil Melingkar dengan Glow */
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+/* Nama & Info Styling */
+.name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem; /* Ukuran diperbesar */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.info {
+    font-size: 1.7rem; /* Ukuran diperbesar */
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 8px;
+}
+
+
 	</style>
 	<body>
     <section class="top-area">
@@ -156,8 +275,8 @@
 				<div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 					<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 						<li class="scroll active"><a href="#home">home</a></li>
-                        			<li class="scroll"><a href="#profile">Profile</a></li>
-                        			<li class="scroll"><a href="#works">Portofolio</a></li>
+                        <li class="scroll"><a href="#profile">Profile</a></li>
+                        <li class="scroll"><a href="#works">Portofolio</a></li>
 						<li class="scroll"><a href="#explore">Pengalaman</a></li>
 						<li class="scroll"><a href="#contact">contact</a></li>
 					</ul><!--/.nav -->
@@ -183,29 +302,30 @@
 					</p>
 				</div>
 <!-- welcome hero -->
-			</div>
-
-			<section id="list-topics" class="list-topics">
-    <div class="container">
-        <div class="list-topics-content">
-            <ul style="margin-top: 500px;">
-					<div class="single-list-topics-content"><a href="profile.html" >
-                <li>
-                        <div class="single-list-topics-icon">
-                            <span class="material-symbols-outlined" style="font-size: 50px;">
-                                account_circle
-                            </span>
+			</div><br><br><br><br><br><br><br><br><br>
+            <section id="profile" class="container mt-5" style="margin-top: 200px;">
+                <div class="profile-card p-4 shadow-lg">
+                    <div class="row align-items-center text-center text-md-start">
+                        <div class="col-md-4">
+                            <div class="profile-img">
+                                <img src="assets/img/diri.png" alt="Foto Profil" class="img-fluid">
+                            </div>
                         </div>
-                        <h2>Profile Saya</h2>
-						</a>
+                        <div class="col-md-8 ">
+                            <h2 class="name">Yogish Aditya</h2>
+                            <p class="info"><strong>Jenis Kelamin:</strong> Laki-laki</p>
+                            <p class="info"><strong>Tanggal Lahir:</strong> 5 September 2007</p>
+                            <p class="info"><strong>Telepon:</strong> +62 857 7986 9414</p>
+                            <p class="info"><strong>Alamat:</strong> Jalan Bangun Reksa Indah 2 Blok B no 18, Karang Tengah</p>
+                        </div>
                     </div>
-                </li>
-            </ul>
-        </div>
-    </div><!--/.container-->
-</section>
-
-		<section id="works" class="works">
+                </div>
+            </section>
+            
+            
+              
+              
+		<section id="works" class="works" style="margin-top: 50px;">
     <div class="container">
         <div class="section-header">
             <h2>Portofolio</h2>
@@ -226,7 +346,7 @@
                             </div>
                             <h2 style="margin-top: 10px;">Game</h2>
                             <p>
-Game yang berhasil saya buat selama di SMK Budi Luhur</p>
+ame yang berhasil saya buat selama di SMK Budi Luhur dengan Unity                           </p>
                             <button class="welcome-hero-btn how-work-btn" onclick="window.location.href='game.php'">
                                 Lebih lanjut
                             </button>
@@ -293,7 +413,21 @@ Aplikasi aplikasi android yang saya buat dengan android studio                  
             <div class="row d-flex align-items-stretch">
                 <!-- Card 1 -->
                 <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="single-explore-item h-100">
+                    <div class="single-explore-item h-100" >
+                        <div class="single-explore-img" style="margin: 15px;"> <!-- Tambahkan margin di sini -->
+                            <img src="assets/img/sekre.png" alt="explore image" style="width: 52%; height: auto; border-radius: 5px;">
+                        </div>
+                        <div class="single-explore-txt bg-theme-1">
+                            <h2 style="margin-bottom: 84px;">Menjadi Bagian dari anggota OSIS di SMK Budi Luhur</h2>
+                            <button class="btn btn-danger text-white">
+                                <a href="https://www.instagram.com/p/DGafpRoSXmH/?img_index=2" target="_blank" style="color: white;">Lihat IG</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="single-explore-item h-100" >
                         <div class="single-explore-img" style="margin: 15px;"> <!-- Tambahkan margin di sini -->
                             <img src="assets/images/image.png" alt="explore image" style="width: 52%; height: auto; border-radius: 5px;">
                         </div>
@@ -306,9 +440,9 @@ Aplikasi aplikasi android yang saya buat dengan android studio                  
                     </div>
                 </div>
                 
-                <!-- Card 2 -->
+                <!-- Card 3 -->
                 <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="single-explore-item h-100" >
+                    <div class="single-explore-item h-100">
                         <div class="single-explore-img" style="margin: 15px;"> <!-- Tambahkan margin di sini -->
                             <img src="assets/images/css.jpeg" alt="explore image" style="width: 100%; height: auto; border-radius: 5px;">
                         </div>
@@ -318,7 +452,7 @@ Aplikasi aplikasi android yang saya buat dengan android studio                  
                     </div>
                 </div>
 
-                <!-- Card 3 -->
+                <!-- Card 4 -->
                 <div class="col-md-3 col-sm-6 mb-4">
                     <div class="single-explore-item h-100" >
                         <div class="single-explore-img" style="margin: 15px;"> <!-- Tambahkan margin di sini -->
@@ -330,7 +464,32 @@ Aplikasi aplikasi android yang saya buat dengan android studio                  
                     </div>
                 </div>
                 
-                <!-- Card 4 -->
+                <!-- Card 5 -->
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="single-explore-item h-100">
+                        <div class="single-explore-img" style="margin: 15px;"> <!-- Tambahkan margin di sini -->
+                            <img src="assets/img/Logo.jpeg" alt="explore image" style="width: 100%; height: auto; border-radius: 5px;">
+                        </div>
+                        <div class="single-explore-txt bg-theme-1">
+                            <h2 style="margin-bottom: 47px;">Di sekolah Budi Luhur, Saya juga banyak mempelajari tentang bahasa pemprograman HTML</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="single-explore-item h-100">
+                        <div class="single-explore-img" style="margin: 15px;"> <!-- Tambahkan margin di sini -->
+                            <img src="assets/img/pematik.png" style="height: 130px;" alt="explore image" style="width: 100%; height: auto; border-radius: 5px;">
+                        </div>
+                        <div class="single-explore-txt bg-theme-1">
+                            <h2 style="margin-bottom: 40px;">Juara 2 kegiatan lomba yang diadakan oleh PEMATIK </h2>
+                        </div>
+                        <button style="margin-bottom: 50px;" class="btn btn-danger text-white">
+                            <a href="https://www.instagram.com/p/DDvkVtDT3C5/" target="_blank" style="color: white;">Lihat IG</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Card 7 -->
                 <div class="col-md-3 col-sm-6 mb-4">
                     <div class="single-explore-item h-100">
                         <div class="single-explore-img" style="margin: 15px;"> <!-- Tambahkan margin di sini -->
